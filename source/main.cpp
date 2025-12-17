@@ -82,9 +82,10 @@ int main()
         out vec4 FragColor;
         
         in vec3 vColor;
+        uniform vec4 uColor;
 
         void main(){
-            FragColor = vec4(vColor, 1.0);
+            FragColor = vec4(vColor, 1.0) * uColor;
         }
     )";
     //compile fragment shader
@@ -174,6 +175,8 @@ int main()
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+
+    GLint uColorLoc = glGetUniformLocation(shaderProgram, "uColor");
     
 
     while(!glfwWindowShouldClose(window)) {
@@ -184,6 +187,10 @@ int main()
 
         //activate shader program
         glUseProgram(shaderProgram);
+
+        //activate uniform which is a global gpu variable sent from the cpu to gpu we can use to tint the whole shape
+        glUniform4f(uColorLoc, 1.0f, 0.0f, 0.0f, 0.0f);
+
         //bind vao containing our vertex layout
         glBindVertexArray(vao);
         //render triangle
