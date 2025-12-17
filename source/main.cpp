@@ -22,19 +22,19 @@ void keyCallback(GLFWwindow* window, int key, int scanCode, int action, int mods
 
         case GLFW_KEY_UP:
             std::cout << "GLFW_KEY_UP" << std::endl;
-            offset.y += 0.8f;
+            offset.y += 0.1f;
             break;
         case GLFW_KEY_DOWN:
             std::cout << "GLFW_KEY_DOWN" << std::endl;
-            offset.y -= 0.8f;
+            offset.y -= 0.1f;
             break;
         case GLFW_KEY_RIGHT:
             std::cout << "GLFW_KEY_RIGHT" << std::endl;
-            offset.x += 0.9f;
+            offset.x += 0.1f;
             break;
         case GLFW_KEY_LEFT:
             std::cout << "GLFW_KEY_LEFT" << std::endl;
-            offset.x -= 0.8f;
+            offset.x -= 0.1f;
             break;
         default:
             break;
