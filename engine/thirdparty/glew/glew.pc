@@ -1,6 +1,6 @@
-prefix=C:/Program Files (x86)/GameDevelopmentProject
+prefix=C:/Users/egypt/C++Projects/MyFirstGameEngine/out/install/x64-Debug
 exec_prefix=${prefix}
-libdir=C:/Program Files (x86)/GameDevelopmentProject/lib
+libdir=C:/Users/egypt/C++Projects/MyFirstGameEngine/out/install/x64-Debug/lib
 includedir=${prefix}/include
 
 Name: glew
