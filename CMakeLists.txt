@@ -6,12 +6,17 @@ project (GameDevelopmentProject)
 
 set(PROJECT_SOURCE_FILES
   source/main.cpp
+  source/Game.h
+  source/Game.cpp
 )
 # add the application
 include_directories(source)
-add_executable(${PROJECT_NAME} ${PROJECT_SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCE_FILES} "source/Game.h")
 
 add_subdirectory(engine "${CMAKE_CURRENT_BINARY_DIR}/engine_build")
+
+#adding engine source directory to include path
+include_directories(engine/source)
 
 # link engine library
 target_link_libraries(${PROJECT_NAME} 
