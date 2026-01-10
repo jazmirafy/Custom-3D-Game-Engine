@@ -1,6 +1,6 @@
-prefix=C:/Users/egypt/C++Projects/MyFirstGameEngine/out/install/x64-Debug
+prefix=C:/Users/egypt/Documents/Custom-3D-Game-Engine/out/install/x64-Debug
 exec_prefix=${prefix}
-libdir=C:/Users/egypt/C++Projects/MyFirstGameEngine/out/install/x64-Debug/lib
+libdir=C:/Users/egypt/Documents/Custom-3D-Game-Engine/out/install/x64-Debug/lib
 includedir=${prefix}/include
 
 Name: glew

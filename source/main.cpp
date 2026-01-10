@@ -13,7 +13,7 @@ int main() {
 
 	//initialize engine and game
 	//if initialization is successful, enter the main loop
-	if (engine.Init()) {
+	if (engine.Init(1200, 720)) {
 
 		engine.Run();
 	}
