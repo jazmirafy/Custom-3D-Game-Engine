@@ -6,7 +6,7 @@ int main() {
 	Game* game = new Game();
 
 	//create engine instance
-	eng::Engine engine;
+	eng::Engine& engine = eng::Engine::GetInstance();
 
 	//pass the game instance to the engine
 	engine.SetApplication(game);
