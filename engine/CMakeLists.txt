@@ -11,6 +11,8 @@ set(PROJECT_SOURCE_FILES
 	source/input/InputManager.cpp
 	source/graphics/ShaderProgram.h
 	source/graphics/ShaderProgram.cpp
+	source/graphics/GraphicsAPI.h
+	source/graphics/GraphicsAPI.cpp
 )
 
 include_directories(source)
@@ -27,6 +29,7 @@ add_subdirectory(thirdparty/glew/build/cmake "${CMAKE_CURRENT_BINARY_DIR}/glew_b
 include_directories(thirdparty/glew/include)
 set_property(TARGET glew_s PROPERTY FOLDER GLEW)
 set_property(TARGET glew PROPERTY FOLDER GLEW)
+
 
 # link all thirdparty libraries
 target_link_libraries(${PROJECT_NAME} 
