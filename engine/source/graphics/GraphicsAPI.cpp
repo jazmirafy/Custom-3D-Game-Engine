@@ -1,9 +1,10 @@
 #include "graphics/GraphicsAPI.h"
 #include "graphics/ShaderProgram.h"
+#include "render/Material.h"
 #include <iostream>
 namespace eng {
 
-	std::shared_ptr<ShaderProgram> GraphicsAPI::CreateShaderProgram(const std::string& vertexSource, const std::string fragmentSource) {
+	std::shared_ptr<ShaderProgram> GraphicsAPI::CreateShaderProgram(const std::string& vertexSource, const std::string& fragmentSource) {
 
         //create shader in graphics card
         //compile vertex shader
@@ -68,7 +69,16 @@ namespace eng {
 	}
     void GraphicsAPI::BindShaderProgram(ShaderProgram* shaderProgram) {
 
-        //lets us bind shaders both directly and via unified graphics api class
-        shaderProgram->Bind();
+        if (shaderProgram) {
+            //lets us bind shaders both directly and via unified graphics api class
+            shaderProgram->Bind();
+        }
     }
+    void GraphicsAPI::BindMaterial(Material* material) {
+
+        if (material) {
+            material->Bind();
+        }
+    }
+
 }

@@ -29,7 +29,8 @@ bool Game::Init(){
 )";
     auto& graphicsAPI = eng::Engine::GetInstance().GetGraphicsAPI();
     auto shaderProgram = graphicsAPI.CreateShaderProgram(vertexShaderSource, fragmentShaderSource);
-	return true;
+    m_material.SetShaderProgram(shaderProgram);
+    return true;
 
 }
 void Game::Update(float deltaTime){
